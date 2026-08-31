@@ -1,0 +1,24 @@
+{
+  "model": "RandomForestClassifier",
+  "features": [
+    "imp_prev30",
+    "pos_prev30",
+    "ctr_prev30",
+    "days_since_update"
+  ],
+  "split_design": "GroupShuffleSplit by client_hash_id, test_size=0.25",
+  "validated_auc_grouped_split": 0.6125,
+  "auc_random_split_before_fix": 0.6699,
+  "baseline_rule_auc_week4": 0.5118,
+  "leakage_test_honest_auc": 0.6125,
+  "leakage_test_leaky_auc": 0.7297,
+  "total_content_items_scored": 81383,
+  "decline_rate_in_data": 0.252,
+  "action_label_counts": {
+    "monitor_only": 73954,
+    "review_soon": 5891,
+    "review_urgent": 1538
+  },
+  "date_window": "2026-02-01 to 2026-03-31",
+  "outcome_window_definition": "last30 impressions < 80% of prev30 impressions"
+}
